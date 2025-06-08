@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+<body>
+    <!--THE ONCLICK FUNCTIONS WILL CHANGE H1 ON USER CLICK TO (IS AWESOME)-->
+    <h1 id="heading" onclick="changeTextMessage()">JavaScript</h1>
+    <p id="addition"></p>
+        
+    <script>
+
+        addNumbers(13,13)
+        function changeTextMessage() {
+            if(document.getElementById("heading").innerHTML==`JavaScript`){
+                document.getElementById("heading").innerHTML=`is awesome`
+            } else{
+                document.getElementById("heading").innerHTML=`JavaScript`
+            }
+         }
+
+        function addNumbers(num1, num2) {
+            document.getElementById("addition").innerHTML = num1 * num2;
+        }
+        </script>
+    </body>
+</html>
