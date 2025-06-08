@@ -7,18 +7,18 @@
 </head>
 <body>
 
-    <h1>User Password Status</h1>
-    <p id="output"></p>
+    <h1>Password Authentication</h1>
+    <p id="passwordCheck"></p>
     
     
     <script>
-        var userInputPassword = "911";
-        var actualPassword = "911";
+        let userInputPassword = "911";
+        let actualPassword = "911";
 
         if (userInputPassword == actualPassword) {
-            document.getElementById("output").innerHTML=("Password Successful!");
+            document.getElementById("passwordCheck").innerHTML=("password successful ✔️");
         } else{
-        document.getElementById("output").innerHTML=("Password unsuccessful!");
+        document.getElementById("output").innerHTML=("Password unsuccessful 🚫");
         }
     </script>
 </body>
