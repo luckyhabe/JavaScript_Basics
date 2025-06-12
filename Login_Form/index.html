@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
     <title>Login Form</title>
 </head>
 <body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Login Form</h1>
+            <p>Welcome back! Please enter your credentials</p>
+        </div>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <label for="usernameInput">Username</label>
+                <input type="text" id="usernameInput" placeholder="Enter username" autocomplete="username" />
+            </div>
+            
+            <div class="input-group">
+                <label for="userpasswordInput">Password</label>
+                <input type="password" id="userpasswordInput" placeholder="Enter password" autocomplete="current-password" />
+                <span class="password-toggle" onclick="togglePassword()"></span>
+                <div class="password-strength">
+                    <div id="strength-meter"></div>
+                </div>
+            </div>
+            
+            <p id="promptMessage"></p>
+            
+            <button type="button" class="login-btn" onclick="verifyUserinput()">Log in</button>
+            
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+                <p><a href="#">Forgot password?</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function verifyUserinput() {
+            let username = document.getElementById("usernameInput").value;
+            let password = document.getElementById("userpasswordInput").value;
+            verifyUserDetails(username, password) 
+        }
+        function verifyUserDetails(username, password) {
+            let systemUsername = "LHABE601";
+            let systemPassword = "SelfmadeLH@2025";
+            if (username == systemUsername && password == systemPassword) {
+                document.getElementById("promptMessage").innerHTML = "Password valid!... loging in";
+            } else{
+                document.getElementById("promptMessage").innerHTML ="Invalid username or password!"
+            }
+        }
+
+    </script>
     
 </body>
 </html>

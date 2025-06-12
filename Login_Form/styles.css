@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+        --primary: #4361ee;
+        --primary-dark: #38e92b;
+        --secondary: #f72585;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --gray: #6c757d;
+        --success: #0f627c;
+        --error: #f72585;
+    }
+
+    body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            background-attachment: fixed;
+        }
+    
+.login-container {
+            background: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            max-width: 450px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+.login-header {
+            background: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .login-header h1 {
+            font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .login-header p {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* Step 4: Form Styling */
+        .login-form {
+            padding: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .input-group input::placeholder {
+            color: #adb5bd;
+        }
+        
+        /* Step 5: Password Toggle */
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 42px;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        /* Step 6: Button Styling */
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .login-btn:active {
+            transform: scale(0.98);
+        }
+        
+        /* Step 7: Prompt Message Styling */
+        #promptMessage {
+            text-align: center;
+            margin: 20px 0;
+            min-height: 24px;
+            font-weight: 500;
+        }
+        
+        .success {
+            color: #2ec4b6;
+        }
+        
+        .error {
+            color: var(--error);
+        }
+        
+        /* Step 8: Responsive Design */
+        @media (max-width: 480px) {
+            .login-container {
+                max-width: 100%;
+            }
+            
+            .login-header {
+                padding: 25px 15px;
+            }
+            
+            .login-header h1 {
+                font-size: 1.7rem;
+            }
+            
+            .login-form {
+                padding: 25px 20px;
+            }
+        }
+        
+        /* Step 9: Additional Enhancements */
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+        }
+        
+        .form-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        
+        
+        .login-container {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
