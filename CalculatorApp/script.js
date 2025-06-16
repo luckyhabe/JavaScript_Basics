@@ -1,21 +1,37 @@
-let currentInput = '0';    
+let currentInput = '0';
 let firstOperand = null;
-let operator = null;      
+let operator = null;
 let waitingForSecondOperand = false;
 
+function init() {
+    updateDisplay();
+}
+init();
+
+
 function updateDisplay() {
-  const display = document.getElementById('inputBox');
-  display.value = currentInput;
+    document.getElementById('inputBox').value = currentInput;
 }
 
-updateDisplay();
-
 function btnPressed(number) {
-  if (waitingForSecondOperand) {
-    currentInput = String(number);
-    waitingForSecondOperand = false;
-  } else {
-    currentInput = currentInput === '0' ? String(number) : currentInput + number;
-  }
-  updateDisplay();
+    if (waitingForSecondOperand) {
+        currentInput = String(number);
+        waitingForSecondOperand = false;
+    } else {
+        currentInput = currentInput === '0' ? String(number) : currentInput + number;
+    }
+    updateDisplay();
+}
+
+function inputDecimal() {
+    if (waitingForSecondOperand) {
+        currentInput = '0.';
+        waitingForSecondOperand = false;
+        return;
+    }
+    
+    if (!currentInput.includes('.')) {
+        currentInput += '.';
+    }
+    updateDisplay();
 }
