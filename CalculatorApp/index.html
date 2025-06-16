@@ -17,33 +17,33 @@
                 <td onclick="btnPressed(7)">7</td>
                 <td onclick="btnPressed(8)">8</td>
                 <td onclick="btnPressed(9)">9</td>
-                <td>x</td>
+                <td onclick="handleOperator('×')">x</td>
         </tr>
 
         <tr>
             <td onclick="btnPressed(4)">4</td>
             <td onclick="btnPressed(5)">5</td>
             <td onclick="btnPressed(6)">6</td>
-            <td>-</td>
+            <td onclick="handleOperator('-')">-</td>
         </tr>
 
         <tr>
             <td onclick="btnPressed(1)">1</td>
             <td onclick="btnPressed(2)">2</td>
             <td onclick="btnPressed(3)">3</td>
-            <td>+</td>
+            <td onclick="handleOperator('+')">+</td>
         </tr>
 
         <tr>
-            <td>,</td>
+            <td onclick="inputDecimal()">.</td>
             <td onclick="btnPressed(0)">0</td>
             <td>AC</td>
-            <td>/</td>
+            <td onclick="handleOperator('/')">/</td>
         </tr>
 
         <tr>
             <td colspan="3">=</td>
-            <td>%</td>
+            <td onclick="handleOperator('%')">%</td>
         </tr>
     </table>
 
